@@ -6,4 +6,5 @@ $(document).ready( function() {
     draggable: true
   }
 );
+  $('.parallax').parallax();
 });
