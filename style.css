@@ -9,9 +9,19 @@ main {
 }
 
 .brand-logo{
-  font-size: 3em;
 }
 
 #nav-mobile{
   margin-right: 2em;
+}
+#nav{
+  padding-bottom: 15em;
+}
+#button{
+  display: flex;
+  justify-content: center;
+  margin-top: 20em;
+}
+.material-icons{
+  font-size: 60px;
 }
