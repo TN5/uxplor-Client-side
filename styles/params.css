@@ -41,3 +41,6 @@ main {
 .row {
 
 }
+.dropdown-content li > a, .dropdown-content li > span{
+  color: #00bcd4;
+}

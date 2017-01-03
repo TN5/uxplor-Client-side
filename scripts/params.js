@@ -14,7 +14,6 @@ $(document).ready(function(){
     closeOnClick: true,
     draggable: true
   });
-
 })
 
 var longitude;
@@ -37,7 +36,7 @@ function success(pos) {
     var radius = parseInt($('#radius').val()) * .3048;
     var type = $('select.select').val();
     if (type != '' && !isNaN(radius)){
-      var url = `http://localhost:3000/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
+      var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
       $.get(url, function(data) {
         console.log(data);
       });
