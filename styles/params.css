@@ -19,7 +19,7 @@ main {
 }
 
 #nav {
-  padding-bottom: 8vh;
+  padding-bottom: 15vh;
   margin-bottom: 5em;
 }
 #button{
@@ -35,7 +35,9 @@ main {
   display: flex;
   justify-content: center;
 }
-
+.form-section {
+  margin-top: 7vh;
+}
 .row {
 
 }
