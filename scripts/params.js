@@ -33,7 +33,7 @@ function success(pos) {
     if (type != '' && !isNaN(radius)){
       var url = `http://localhost:3000/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
     } else {
-      throw new Error('invalid input');
+      alert("Invalid Input");
     }
   })
 };
