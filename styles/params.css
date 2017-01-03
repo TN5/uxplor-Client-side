@@ -8,14 +8,19 @@ main {
   flex: 1 0 auto;
 }
 
-.brand-logo{
+#brand {
+   width: 70%;
+   height: auto;
 }
+
 
 #nav-mobile{
   margin-right: 2em;
 }
-#nav{
-  padding-bottom: 15em;
+
+#nav {
+  padding-bottom: 8vh;
+  margin-bottom: 4em;
 }
 #button{
   display: flex;
@@ -32,5 +37,5 @@ main {
 }
 
 .row {
-  
+
 }

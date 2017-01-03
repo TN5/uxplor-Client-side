@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>uXplor Params</title>
     <link rel="stylesheet" href="https://w3cj.github.io/materialize-themes/dist/css/materialize-cyan-lime.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/params.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav id="nav">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center"><img src="pics/logothingy.png" alt=""/></a>
+          <a href="#" class="brand-logo center"><img id="brand" src="pics/logoparams.png" alt=""/></a>
           <ul id="nav-mobile" class="left hide-on-med-and-down">
           </ul>
         </div>
@@ -54,23 +54,22 @@
           <div class="input-field col s3 right-align">
             <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">remove</i></a>
           </div>
-          <div class="input-field col s6">
+          <div class="input-field col s6 container center-align">
             <input id="radius" type="text" class="validate">
-            <label for="radius">Radius</label>
+            <label for="radius">Radius&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           </div>
           <div class="input-field col s3 left-align">
             <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">add</i></a>
           </div>
         </div>
         <div class="row container center-align">
-          <div class="input-field col s12">
+          <div class="input-field col s8 container offset-s2">
             <select>
               <option value="" disabled selected>Pick location type</option>
               <option value="1">Option 2</option>
               <option value="2">Option 2</option>
               <option value="3">Option 3</option>
             </select>
-            <label>Location</label>
           </div>
         </div>
         <div class="container center-align">
