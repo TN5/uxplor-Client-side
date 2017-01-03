@@ -25,3 +25,12 @@ main {
 .material-icons{
   font-size: 60px;
 }
+
+#params-input {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  
+}
