@@ -19,8 +19,8 @@ main {
 }
 
 #nav {
-  padding-bottom: 8vh;
-  margin-bottom: 4em;
+  padding-bottom: 15vh;
+  margin-bottom: 5em;
 }
 #button{
   display: flex;
@@ -35,7 +35,9 @@ main {
   display: flex;
   justify-content: center;
 }
-
+.form-section {
+  margin-top: 7vh;
+}
 .row {
 
 }
