@@ -39,28 +39,42 @@
 <!-- main -->
     <main>
       <form>
-        <div class="row">
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 2</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-            <label>Materialize Select</label>
+        <div class="row container center-align">
+          <div class="input-field col s4 right-align">
+            <a class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_walk</i></a>
+          </div>
+          <div class="input-field col s4">
+            <a class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_bike</i></a>
+          </div>
+          <div class="input-field col s4 left-align">
+            <a class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_car</i></a>
           </div>
         </div>
         <div id="params-input" class="row container center-align">
-          <div class="input-field col s3 ">
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">remove</i></a>
+          <div class="input-field col s3 right-align">
+            <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">remove</i></a>
           </div>
           <div class="input-field col s6">
             <input id="radius" type="text" class="validate">
             <label for="radius">Radius</label>
           </div>
-          <div class="input-field col s3">
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <div class="input-field col s3 left-align">
+            <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">add</i></a>
           </div>
+        </div>
+        <div class="row container center-align">
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Pick location type</option>
+              <option value="1">Option 2</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Location</label>
+          </div>
+        </div>
+        <div class="container center-align">
+          <a class="waves-effect waves-light btn">button</a>
         </div>
       </form>
     </main>
