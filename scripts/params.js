@@ -46,3 +46,18 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 setInterval(function (){
   navigator.geolocation.getCurrentPosition(success, error, options);
 }, 6000)
+
+$('#walk-btn').click(function() {
+  $('#radius').val('1000ft');
+  $('#radius-label').hide();
+});
+
+$('#bike-btn').click(function() {
+  $('#radius').val('6000ft');
+  $('#radius-label').hide();
+});
+
+$('#car-btn').click(function() {
+  $('#radius').val('12000ft');
+  $('#radius-label').hide();
+});
