@@ -41,21 +41,20 @@ $('#param-submit').click(function() {
       placesRay = data.results;
       console.log(placesRay);
 
-      let str = `You have ${placesRay.length} locations to chose from, or you may start a new search!`;
-      $('#play-btn').css('display', 'block');
-      if(placesRay.length === 0) {
-        str = `You have 0 locations to chose from. Start a new search!`;
-        $('#play-btn').css('display', 'none');
-      } else if(placesRay.length === 0) {
-        str = `You have a single locations to chose from or you may start a new search!`;
+      if(placesRay.length > 0) {
+        let str = `${placesRay.length} locations found. Choose the number of locations for your hunt below:`;
+        $('#play-btn').css('display', 'block');
+        if(placesRay.length === 1) {
+          str = `${placesRay.length} location found`;
+        }
+        $('#location-shower').text(str);
+        $('#available-locations').fadeOut(10);
+        $('#location-number').val(Math.min(placesRay.length, 10));
+        $('.params-page').fadeOut(250);
+        $('.game-setup').delay(250).fadeIn(250);
+      } else {
+        alert('Sorry, no locations match your parameters, please begin a new search.');
       }
-      $('#location-shower').text(str);
-
-      $('#available-locations').fadeOut(10);
-      $('#location-number').val(Math.min(placesRay.length, 10));
-
-      $('.params-page').fadeOut(250);
-      $('.game-setup').delay(250).fadeIn(250);
     });
   } else {
     alert("Invalid Input");
@@ -97,6 +96,11 @@ $('#decrementer').click(function() {
   changeRadius(-1);
 });
 
+$('#play-btn').click(function() {
+  let gameLocRay = createScavengeLocationArray();
+  console.log(gameLocRay);
+});
+
 function changeRadius(coef) {
   var change = 100;
   var radius = parseInt($('#radius').val());
@@ -124,3 +128,14 @@ function changePlaceCount(inc) {
     $('#location-number').val(placeCount);
   }
 }
+
+function createScavengeLocationArray() {
+  let gameLocRay = [];
+
+  return gameLocRay;
+}
+
+
+$('#play-btn').click(function() {
+  let gameLocRay = createScavengeLocationArray(tempVal, maxVal);
+});
