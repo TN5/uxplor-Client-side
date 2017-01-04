@@ -71,18 +71,21 @@ setInterval(function (){
   navigator.geolocation.getCurrentPosition(success, error, options);
 }, 6000)
 
+$('#radius-label').hide();
+$('#radius').val('1000ft radius');
+
 $('#walk-btn').click(function() {
-  $('#radius').val('1000');
+  $('#radius').val('1000ft');
   $('#radius-label').hide();
 });
 
 $('#bike-btn').click(function() {
-  $('#radius').val('6000');
+  $('#radius').val('6000ft');
   $('#radius-label').hide();
 });
 
 $('#car-btn').click(function() {
-  $('#radius').val('12000');
+  $('#radius').val('12000ft');
   $('#radius-label').hide();
 });
 
