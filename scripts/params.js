@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 var longitude;
 var latitude;
+var placesRay = [];
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -37,7 +38,22 @@ $('#param-submit').click(function() {
     var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
     $.get(url, function(data) {
       data = JSON.parse(data);
-      console.log(data.results);
+      placesRay = data.results;
+      console.log(placesRay);
+
+      let str = `You have ${placesRay.length} locations to chose from, or you may start a new search!`;
+      if(placesRay.length === 0) {
+        str = `You have 0 locations to chose from. Start a new search!`;
+      } else if(placesRay.length === 0) {
+        str = `You have a single locations to chose from or you may start a new search!`;
+      }
+      $('#location-shower').text(str);
+
+      $('#available-locations').fadeOut(10);
+      $('#location-number').val(Math.min(placesRay.length, 10));
+
+      $('.params-page').fadeOut(250);
+      $('.game-setup').delay(250).fadeIn(250);
     });
   } else {
     alert("Invalid Input");

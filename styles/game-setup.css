@@ -44,7 +44,3 @@ main {
 .dropdown-content li > a, .dropdown-content li > span{
   color: #00bcd4;
 }
-
-.game-setup {
-  display: none;
-}
