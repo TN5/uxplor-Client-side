@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#brand {
+   width: 70%;
+   height: auto;
+}
+
+
+#nav-mobile{
+  margin-right: 2em;
+}
+
+#nav {
+  padding-bottom: 15vh;
+  margin-bottom: 5em;
+}
+#button{
+  display: flex;
+  justify-content: center;
+  margin-top: 20em;
+}
+.material-icons{
+  font-size: 60px;
+}
+
+#params-input {
+  display: flex;
+  justify-content: center;
+}
+.form-section {
+  margin-top: 7vh;
+}
+.row {
+
+}
+.dropdown-content li > a, .dropdown-content li > span{
+  color: #00bcd4;
+}
