@@ -44,3 +44,7 @@ main {
 .dropdown-content li > a, .dropdown-content li > span{
   color: #00bcd4;
 }
+
+#param-submit {
+  display: none;
+}

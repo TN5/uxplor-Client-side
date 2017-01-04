@@ -28,12 +28,14 @@ function success(pos) {
   var crd = pos.coords;
   latitude = crd.latitude;
   longitude = crd.longitude;
+  $('#param-submit').css('display', 'inline')
 };
 
 $('#param-submit').click(function() {
   var radius = parseInt($('#radius').val()) * .3048;
   var type = $('select.select').val();
   if (type != '' && !isNaN(radius)){
+    $('#param-submit').attr('href', 'game-setup.html')
     var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
     $.get(url, function(data) {
       data = JSON.parse(data);

@@ -8,6 +8,10 @@ main {
   flex: 1 0 auto;
 }
 
+#skyline-image {
+  width: 100%;
+}
+
 .brand-logo{
 }
 
