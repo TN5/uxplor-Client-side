@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>uXplor Params</title>
+    <link rel="stylesheet" href="https://w3cj.github.io/materialize-themes/dist/css/materialize-cyan-lime.css">
+    <link rel="stylesheet" href="styles/params.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+      <header class="header">
+        <nav id="nav">
+          <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo center"><img src="pics/logoparams.png" alt="" /></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="params.html">Play</a></li>
+              <li><a href="profile.html">Profile</a></li>
+            </ul>
+          </div>
+
+        <ul id="slide-out" class="side-nav">
+           <li><div class="userView">
+             <div class="background">
+               <img src="pics/dummyskyline.jpg">
+             </div>
+             <a href="#!user"><img class="circle" src="pics/dummyprofilepic.jpeg"></a>
+             <a href="#!name"><span class="white-text name">User</span></a>
+             <a href="#!email"><span class="white-text email">user@gmail.com</span></a>
+           </div></li>
+           <li><a class="waves-effect" href="#!">Play</a></li>
+           <li><a class="waves-effect" href="params.html">Set rules</a></li>
+           <li><div class="divider"></div></li>
+           <li><a class="subheader">Your profile</a></li>
+           <li><a class="waves-effect" href="#!">Badges</a></li>
+         </ul>
+         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        </nav>
+      </header>
+<!-- main -->
+    <main>
+      <form>
+        <div class="container center-align">
+          <h4>You have <a><i class="material-icons">location_on</i></a>locations</h4>
+        </div>
+
+        <div id="params-input" class="row container center-align">
+          <div class="input-field col s3 right-align">
+            <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">remove</i></a>
+          </div>
+          <div class="input-field col s6 container center-align">
+            <input id="location-number" type="text" class="center-align validate">
+            <label for="location-number">Number of Locations</label>
+          </div>
+          <div class="input-field col s3 left-align">
+            <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">add</i></a>
+          </div>
+        </div>
+          <div class="row container center-align">
+            <div class="input-field col s3 offset-s3 right-align">
+              <div class="container">
+                <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
+              </div>
+            </div>
+            <div class="input-field col s3 right-align">
+              <div class="container">
+                <a href="/params" class="waves-effect waves-light btn" id="new-search">New Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+<!-- footer -->
+    <footer class="page-footer">
+         <div class="footer-copyright">
+           <div class="container">
+           © 2017 uXplor
+           <a id ="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
+           </div>
+         </div>
+    </footer>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+       <script src="scripts/params.js" charset="utf-8"></script>
+  </body>
+</html>
