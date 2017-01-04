@@ -18,8 +18,6 @@ $(document).ready(function(){
 
 var longitude;
 var latitude;
-var type = 'bar';
-
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -28,26 +26,26 @@ var options = {
 
 function success(pos) {
   var crd = pos.coords;
-
   latitude = crd.latitude;
   longitude = crd.longitude;
-
-  $('#param-submit').click(function() {
-    var radius = parseInt($('#radius').val()) * .3048;
-    var type = $('select.select').val();
-    if (type != '' && !isNaN(radius)){
-      var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
-      $.get(url, function(data) {
-        console.log(data);
-      });
-    } else {
-      alert("Invalid Input");
-    }
-  })
 };
 
+$('#param-submit').click(function() {
+  var radius = parseInt($('#radius').val()) * .3048;
+  var type = $('select.select').val();
+  if (type != '' && !isNaN(radius)){
+    var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
+    $.get(url, function(data) {
+      data = JSON.parse(data);
+      console.log(data.results);
+    });
+  } else {
+    alert("Invalid Input");
+  }
+})
+
 function error(err) {
-  // console.warn(ERROR(`(${err.code}): ${err.message}`);
+  console.warn(`ERROR${err.code}: ${err.message}`);
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
