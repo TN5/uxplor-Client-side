@@ -42,7 +42,7 @@
     <main>
       <form>
         <div class="container center-align">
-          <h4>You have <a><i class="material-icons">location_on</i></a> locations</h4>
+          <h4>You have <a><i class="material-icons">location_on</i></a>locations</h4>
         </div>
 
         <div id="params-input" class="row container center-align">
@@ -57,11 +57,18 @@
             <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">add</i></a>
           </div>
         </div>
-        <div class="container center-align">
-          <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
-        </div>
-        <div class="container center-align">
-          <a class="waves-effect waves-light btn" id="new-search">New Search</a>
+          <div class="row container center-align">
+            <div class="input-field col s3 offset-s3 right-align">
+              <div class="container">
+                <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
+              </div>
+            </div>
+            <div class="input-field col s3 right-align">
+              <div class="container">
+                <a href="/params" class="waves-effect waves-light btn" id="new-search">New Search</a>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </main>
