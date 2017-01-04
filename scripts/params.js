@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 var longitude;
 var latitude;
+var placesRay = [];
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -38,6 +39,8 @@ $('#param-submit').click(function() {
     $.get(url, function(data) {
       data = JSON.parse(data);
       console.log(data.results);
+      placesRay = data.results;
+      window.location = "http://www.localhost:8080/game-setup.html";
     });
   } else {
     alert("Invalid Input");
