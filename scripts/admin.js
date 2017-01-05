@@ -10,7 +10,7 @@ $(document).ready( function() {
 });
 
 $('#flagged').click(function() {
-  $.get('http://localhost:3000/flag', function(flagged) {
+  $.get('https://https://uxplor.herokuapp.com/flag', function(flagged) {
     var $list = $('#flags')
     $('#ratings').html('');
     $list.html('');
@@ -34,7 +34,7 @@ $('#flagged').click(function() {
 });
 
 $('#rating').click(function() {
-  $.get('http://localhost:3000/feedback', function(rating) {
+  $.get('https://https://uxplor.herokuapp.com/feedback', function(rating) {
     var $ratings = $('#ratings')
     $('#flags').html('');
     $ratings.html('');
