@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('select').material_select();
+  $('.modal').modal();
   $.get('types.txt', function(data) {
     data = data.split('\n');
     data.forEach(function(i) {

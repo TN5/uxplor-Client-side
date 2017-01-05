@@ -91,3 +91,7 @@ input[type="text"] {
 input.select-dropdown {
   font-size: 2em !important;
 }
+
+.card-image.flag-image {
+  height: 2em;
+}

@@ -128,7 +128,7 @@
             <div class="card cyan">
               <div class="card-content white-text">
                 <p id="location-name" class="card-title center-align">Location Name</p>
-                <p id="location-address"class="center-align">Location Address Line 1</p>
+                <p id="location-address" class="center-align">Location Address Line 1</p>
               </div>
             </div>
           </div>
@@ -148,7 +148,57 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col s2">
+          <div class="card">
+            <div class="card-image">
+              <a href="#modal1"><img class="flag-image" src="pics/flag.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <span class="card-title">Flag a Location</span>
+                <p>Please select the reason for flagging this location.</p>
+              </div>
+              <div class="card-action">
+                <form class="form">
+
+                  <input name="group1" type="radio" id="test1" />
+                  <label for="test1">Dangerous</label>
+
+                  <input name="group2" type="radio" id="test2" />
+                  <label for="test2">Inappropriate</label>
+
+                  <input name="group3" type="radio" id="test3" />
+                  <label for="test3">Impractical</label>
+
+                  <input name="group4" type="radio" id="test4" />
+                  <label for="test4">Other</label>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
+    </div>
+
+    <section class="flag-modal">
+
+    </section>
+
 
   </main>
 
