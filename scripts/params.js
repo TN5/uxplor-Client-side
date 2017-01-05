@@ -178,5 +178,5 @@ function distanceToLocation(lat, long) {
   let distLong = deltaLong * (365221.43 * Math.sin((90 - long) * .0174533));
   let distance = Math.sqrt((distLat * distLat) + (distLong * distLong));
   console.log(distLat, distLong, distance);
-  $('#distance-to').text(distance);
+  $('#distance-to').text(`${Math.ceil(distance)}ft to ${locationObj.name}`);
 }
