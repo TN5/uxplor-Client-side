@@ -22,3 +22,10 @@ padding-left: .25em;
 .flex {
   display: flex;
 }
+
+.box-style {
+  height: 28em;
+  width: 24em;
+  background-color: lime;
+  box-shadow: 0px 0px 5px 5px white;
+}
