@@ -1,3 +1,29 @@
+/**/
+*{
+  margin: 0px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+
+#nav-mobile{
+  margin-right: 2em;
+}
+#nav{
+  padding-bottom: 15em;
+}
+#play-button{
+  display: flex;
+  justify-content: center;
+}
+.material-icons{
+  font-size: 60px;
+}
+
 .badges {
   margin-top: 4em;
 }
