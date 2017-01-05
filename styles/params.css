@@ -35,16 +35,39 @@ main {
   display: flex;
   justify-content: center;
 }
+.btn-floating.btn-large i {
+    font-size: 4em;
+    line-height: 1.6em;
+}
+
+.btn-floating.btn-large {
+    width: 7em;
+    height: 7em;
+}
+
 .form-section {
   margin-top: 7vh;
 }
 .row {
 
 }
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    display: block;
+    font-size: 7em;
+    padding-top: 1em;
+  }
 .dropdown-content li > a, .dropdown-content li > span{
   color: #00bcd4;
 }
-
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    padding-top: 2.6em;
+    white-space: nowrap;
+}
 .game-setup {
   display: none;
 }
