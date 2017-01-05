@@ -26,7 +26,6 @@ padding-left: .25em;
 .box-style {
   height: 28em;
   width: 24em;
-  background-color: lime;
   box-shadow: 0px 0px 5px 5px white;
 }
 
@@ -45,4 +44,13 @@ padding-left: .25em;
 
 .center-image {
   display: flex;
+}
+
+.font-fix {
+  font-size: 24pt;
+}
+
+.congrats {
+  margin: 3em;
+  padding: 2em;
 }
