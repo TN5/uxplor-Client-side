@@ -148,7 +148,23 @@ function makePlaceObj(item) {
 }
 
 $('#play-btn').click(function() {
-  console.log('hello');
   let gameLocRay = createScavengeLocationArray();
   console.log(gameLocRay);
+  gameLocRay = JSON.stringify(gameLocRay);
+  localStorage.setItem('gameLocRay', gameLocRay);
+  console.log(localStorage.getItem('gameLocRay'));
+  // displayLocationInfo();
 });
+
+function displayLocationInfo() {
+  let obj = placesRay.pop();
+  console.log(obj);
+  $('#location-name').text(obj.name);
+  $('#location-address').text(obj.address);
+  let distance = distanceToLocation(obj.lat, obj.long);
+  $('#distance-to').text(distance);
+}
+
+function distanceToLocation(lat, long) {
+  return lat;
+}
