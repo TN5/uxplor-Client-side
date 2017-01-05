@@ -87,3 +87,7 @@ input[type="text"] {
   line-height: 22px;
   padding: 14px 16px;
 }
+
+input.select-dropdown {
+  font-size: 2em !important;
+}
