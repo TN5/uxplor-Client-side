@@ -1,10 +1,13 @@
+*{
+  margin: 0px;
+}
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-main {
+.main {
   flex: 1 0 auto;
   background-image: url("../pics/dummyskyline.jpg");
   background-attachment: fixed;
@@ -18,10 +21,9 @@ main {
 #nav{
   padding-bottom: 15em;
 }
-#button{
+#play-button{
   display: flex;
   justify-content: center;
-  margin-bottom: 20em;
 }
 .material-icons{
   font-size: 60px;
@@ -41,16 +43,23 @@ main {
   margin-left: 10vw;
   margin-right: 5vw;
   width: 35vw;
-  height: 25vh;
   opacity: .7;
   color: #00bcd4;
 }
 
 #signup {
+  margin-top: 1.5em;
   width: 35vw;
   opacity: .7;
   color: #00bcd4;
-  margin-left: 5vw;
-  margin-right: 10vw;
+  margin-left: 4vw;
+  /*margin-right: 15vw;*/
+}
+#form-inputs{
+  display: flex;
+  justify-content: space-around;
+}
 
+footer.page-footer {
+  margin: 0px;
 }
