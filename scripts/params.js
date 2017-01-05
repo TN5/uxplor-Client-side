@@ -39,7 +39,6 @@ $('#param-submit').click(function() {
     $.get(url, function(data) {
       data = JSON.parse(data);
       placesRay = data.results;
-      console.log(placesRay);
 
       if(placesRay.length > 0) {
         let str = `${placesRay.length} locations found. Choose the number of locations for your hunt below:`;
@@ -96,11 +95,6 @@ $('#decrementer').click(function() {
   changeRadius(-1);
 });
 
-$('#play-btn').click(function() {
-  let gameLocRay = createScavengeLocationArray();
-  console.log(gameLocRay);
-});
-
 function changeRadius(coef) {
   var change = 100;
   var radius = parseInt($('#radius').val());
@@ -123,19 +117,38 @@ $('#decrementer2').click(function() {
 
 function changePlaceCount(inc) {
   var placeCount = parseInt($('#location-number').val()) + inc;
-  console.log(placeCount);
   if (placeCount < placesRay.length + 1 && placeCount >= 1) {
     $('#location-number').val(placeCount);
   }
 }
 
 function createScavengeLocationArray() {
-  let gameLocRay = [];
-
-  return gameLocRay;
+  let newLen = $('#location-number').val();
+  let oldLen = placesRay.length;
+  let ray = [];
+  for(var i = 0; i < newLen; i++) {
+    let tempObj = {};
+    var index = Math.floor(Math.random() * placesRay.length);
+    console.log(placesRay.length, index);
+    ray.push(makePlaceObj(placesRay[index]));
+    placesRay.splice(index, 1);
+  }
+  console.log(ray);
+  return ray;
 }
 
+function makePlaceObj(item) {
+    let tempObj = {};
+    tempObj.name = item.name;
+    tempObj.id = item.place_id;
+    tempObj.Address = item.vicinity;
+    tempObj.lat = item.geometry.location.lat;
+    tempObj.long = item.geometry.location.lng;
+    return tempObj;
+}
 
 $('#play-btn').click(function() {
-  let gameLocRay = createScavengeLocationArray(tempVal, maxVal);
+  console.log('hello');
+  let gameLocRay = createScavengeLocationArray();
+  console.log(gameLocRay);
 });
