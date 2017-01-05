@@ -21,7 +21,10 @@ $(document).ready(function() {
       rating: star
     }
     console.log(ratingObject);
-    // $.post
+    var url = 'https://uxplor.herokuapp.com/feedback'
+    $.post(url, ratingObject, function(result){
+      console.log(result)
+    });
   });
 
 });
