@@ -40,12 +40,14 @@
       </nav>
     </header>
     <main>
-      <section id="admin container">
-        <button class="waves-effect waves-light btn">See flaged locations</button>
-        <section class="container location">
-        </section>
-        <button class="waves-effect waves-light btn">See ratings</button>
+      <section id="admin" class="container">
+        <button id="flagged" class="waves-effect waves-light btn">Flagged</button>
+        <button id="rating" class="waves-effect waves-light btn">Ratings</button>
       </section>
+      <ul class="collection" id="flags">
+      </ul>
+      <ul class="collection" id="ratings">
+      </ul>
     </main>
     <footer class="page-footer">
 
@@ -58,6 +60,6 @@
        </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script src="./scripts/app.js" charset="utf-8"></script>
+    <script src="./scripts/admin.js" charset="utf-8"></script>
   </body>
 </html>
