@@ -44,11 +44,3 @@ main {
 .dropdown-content li > a, .dropdown-content li > span{
   color: #00bcd4;
 }
-
-<<<<<<< HEAD
-#param-submit {
-=======
-.game-setup {
->>>>>>> 06eb4fe2e1857e045de177cd89a7ba18f96dd591
-  display: none;
-}
