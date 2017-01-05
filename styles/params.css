@@ -9,25 +9,26 @@ main {
 }
 
 #brand {
-   width: 70%;
-   height: auto;
+  width: 70%;
+  height: auto;
 }
 
-
-#nav-mobile{
+#nav-mobile {
   margin-right: 2em;
 }
 
 #nav {
   padding-bottom: 15vh;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
-#button{
+
+#button {
   display: flex;
   justify-content: center;
   margin-top: 20em;
 }
-.material-icons{
+
+.material-icons {
   font-size: 60px;
 }
 
@@ -35,49 +36,54 @@ main {
   display: flex;
   justify-content: center;
 }
+
 .btn-floating.btn-large i {
-    font-size: 4em;
-    line-height: 1.6em;
+  font-size: 4em;
+  line-height: 1.6em;
 }
 
 .btn-floating.btn-large {
-    width: 7em;
-    height: 7em;
+  width: 7em;
+  height: 7em;
 }
 
 .form-section {
   margin-top: 7vh;
 }
-.row {
 
-}
+.row {}
+
 nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
-    display: block;
-    font-size: 7em;
-    /*padding-top: 1em;*/
-  }
-.dropdown-content li > a, .dropdown-content li > span{
+  display: block;
+  font-size: 7em;
+  /*padding-top: 1em;*/
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
   color: #00bcd4;
 }
+
 nav .brand-logo {
-    position: absolute;
-    color: #fff;
-    display: inline-block;
-    font-size: 2.1rem;
-    padding: 0;
-    /*padding-top: 2.6em;*/
-    white-space: nowrap;
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  /*padding-top: 2.6em;*/
+  white-space: nowrap;
 }
-.game-setup {
+
+.game-setup, .game-play {
   display: none;
 }
 
-input[type="text"]{
+input[type="text"] {
   font-size: 2em;
 }
-.dropdown-content li > a, .dropdown-content li > span {
-    font-size: 2em;
-    display: block;
-    line-height: 22px;
-    padding: 14px 16px;
+
+.dropdown-content li>a, .dropdown-content li>span {
+  font-size: 2em;
+  display: block;
+  line-height: 22px;
+  padding: 14px 16px;
 }

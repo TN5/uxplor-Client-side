@@ -46,8 +46,8 @@
   </header>
 
   <main>
+
     <div class="params-page">
-      <!-- main -->
       <section class="form-section">
         <form>
           <div class="row container center-align">
@@ -81,16 +81,13 @@
             </div>
           </div>
           <div class="container center-align">
-            <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
+            <a class="waves-effect waves-light btn disabled" id="param-submit">Submit</a>
           </div>
         </form>
       </section>
-      <!-- footer -->
     </div>
 
-    <div class="game-setup">
-
-      <!-- main -->
+    <section class="game-setup">
       <form>
         <div class="container center-align">
           <!-- <h4>You have <a><i class="material-icons">location_on</i></a>locations</h4> -->
@@ -122,9 +119,39 @@
           </div>
         </div>
       </form>
-    </div>
+    </section>
+
+    <section class="game-play">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <p id="location-name" class="card-title center-align">Location Name</p>
+                <p id="location-address"class="center-align">Location Address Line 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <!-- <h1 class="card-title center-align">Location Name</h1> -->
+                <h5 id="distance-to" class="center-align">Distance to Destination: </h5>
+              </div>
+              <!-- <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
-  
+
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">

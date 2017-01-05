@@ -29,6 +29,7 @@ function success(pos) {
   var crd = pos.coords;
   latitude = crd.latitude;
   longitude = crd.longitude;
+  $('#param-submit').removeClass('disabled');
 };
 
 $('#param-submit').click(function() {
@@ -150,9 +151,8 @@ function makePlaceObj(item) {
 $('#play-btn').click(function() {
   let gameLocRay = createScavengeLocationArray();
   console.log(gameLocRay);
-  gameLocRay = JSON.stringify(gameLocRay);
-  localStorage.setItem('gameLocRay', gameLocRay);
-  console.log(localStorage.getItem('gameLocRay'));
+  $('.game-setup').fadeOut(250);
+  $('.game-play').delay(250).fadeIn(250);
   // displayLocationInfo();
 });
 
