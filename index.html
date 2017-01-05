@@ -17,9 +17,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="params.html">Play</a></li>
             <li><a href="profile.html">Profile</a></li>
+            <li><a href="admin.html">Admin</a></li>
           </ul>
         </div>
-
+<!--sidenav-->
       <ul id="slide-out" class="side-nav">
          <li><div class="userView">
            <div class="background">
@@ -38,21 +39,80 @@
        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </nav>
     </header>
-    <main>
-      <div><img class="responsive-img" src="pics/dummyskyline.jpg"></div>
-      <a id="button"s href="params.html"><img src="pics/playbutton2.png" alt="" /></a>
+    <main class="main">
+      <section id="form-inputs" class="row">
+        <section class="col s12 m6  container">
+          <div id="signin" class="card-panel hoverable">
+            <span class="card-title">Sign In</span>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="container">
+                  <a href="#" class="waves-effect waves-light btn" id="submit-signin">sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="col s12 m6 container">
+          <div id="signup" class="card-panel hoverable">
+            <span class="card-title">Create Account</span>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="new_first_name" type="text" class="validate">
+                    <label for="new_first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="new_last_name" type="text" class="validate">
+                    <label for="new_last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="container">
+                  <a href="#" class="waves-effect waves-light btn" id="submit-signup">sign up</a>
+                </div>
+              </form>
+            </div>
+          <div>
+        </section>
+      </section>
+      <div>
+          <a id="play-button"s href="params.html"><img src="pics/playbutton2.png" alt="" /></a>
+      </div>
     </main>
     <footer class="page-footer">
-
-         <div class="footer-copyright">
-           <div class="container">
-           © 2017 uXplor
-           <a id ="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
-           </div>
-         </div>
-       </footer>
+      <div class="container">
+      © 2017 uXplor
+      <a id ="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script src="./scripts/app.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   display: flex;
   min-height: 100vh;
@@ -6,6 +7,10 @@ body {
 
 main {
   flex: 1 0 auto;
+=======
+#nav {
+  padding-bottom: 5vh;
+>>>>>>> 2936269f3598b11533472848c2848f3873777a16
 }
 
 .star {
@@ -31,4 +36,41 @@ padding-left: .25em;
 
 .flex {
   display: flex;
+}
+
+.box-style {
+  height: 28em;
+  width: 23em;
+  box-shadow: 0px 0px 10px 2px black;
+}
+
+.img-style {
+  height: 24em;
+  width: 20em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 3%;
+  box-shadow: 0px 0px 5px 3px white;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image {
+  display: flex;
+}
+
+.font-fix {
+  font-size: 24pt;
+}
+
+.opacity {
+  opacity: .9;
+}
+
+.direct-opacity {
+  opacity: .8;
 }

@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('select').material_select();
+  $('.modal').modal();
   $.get('types.txt', function(data) {
     data = data.split('\n');
     data.forEach(function(i) {
@@ -16,6 +17,8 @@ $(document).ready(function(){
   });
 })
 
+var locationObj = {};
+console.log(locationObj);
 var longitude;
 var latitude;
 var placesRay = [];
@@ -29,6 +32,11 @@ function success(pos) {
   var crd = pos.coords;
   latitude = crd.latitude;
   longitude = crd.longitude;
+  $('#param-submit').removeClass('disabled');
+  if (locationObj != {}) {
+    distanceToLocation(locationObj.lat, locationObj.long)
+  }
+
 };
 
 $('#param-submit').click(function() {
@@ -141,14 +149,34 @@ function makePlaceObj(item) {
     let tempObj = {};
     tempObj.name = item.name;
     tempObj.id = item.place_id;
-    tempObj.Address = item.vicinity;
+    tempObj.address = item.vicinity;
     tempObj.lat = item.geometry.location.lat;
     tempObj.long = item.geometry.location.lng;
     return tempObj;
 }
 
 $('#play-btn').click(function() {
-  console.log('hello');
   let gameLocRay = createScavengeLocationArray();
   console.log(gameLocRay);
+  $('.game-setup').fadeOut(250);
+  $('.game-play').delay(250).fadeIn(250);
+  displayLocationInfo(gameLocRay);
 });
+
+function displayLocationInfo(ray) {
+  locationObj = ray.pop();
+  console.log(locationObj);
+  $('#location-name').text(locationObj.name);
+  $('#location-address').text(locationObj.address);
+  distanceToLocation(locationObj.lat, locationObj.long);
+}
+
+function distanceToLocation(lat, long) {
+  let deltaLat = lat - latitude;
+  let deltaLong = long - longitude;
+  let distLat = deltaLat * 365221.43;
+  let distLong = deltaLong * (365221.43 * Math.sin((90 - long) * .0174533));
+  let distance = Math.sqrt((distLat * distLat) + (distLong * distLong));
+  console.log(distLat, distLong, distance);
+  $('#distance-to').text(`${Math.ceil(distance)}ft to ${locationObj.name}`);
+}
