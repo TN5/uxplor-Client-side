@@ -39,11 +39,10 @@
       </nav>
     </header>
 
-
+    <main>
     <div class="params-page">
-
   <!-- main -->
-      <main class="form-section">
+      <section class="form-section">
         <form>
           <div class="row container center-align">
             <div class="input-field col s4 right-align">
@@ -61,7 +60,7 @@
               <a id="decrementer" class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">remove</i></a>
             </div>
             <div class="input-field col s6 container center-align">
-              <input id="radius" type="text" class="center-align validate">
+              <input id="radius" type="text" id="radius" class="center-align validate">
               <label id="radius-label" for="radius">Radius&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             </div>
             <div class="input-field col s3 left-align">
@@ -70,8 +69,8 @@
           </div>
           <div class="row container center-align">
             <div class="input-field col s8 container offset-s2">
-              <select class="select cyan-text">
-                <option value="" disabled selected>Pick location type</option>
+              <select id ="options"class="select cyan-text">
+                <option value="" disabled selected><h3>Pick location type<h3></option>
               </select>
             </div>
           </div>
@@ -79,14 +78,13 @@
             <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
           </div>
         </form>
-      </main>
+      </section>
   <!-- footer -->
     </div>
 
     <div class="game-setup">
 
 <!-- main -->
-    <main>
       <form>
         <div class="container center-align">
           <!-- <h4>You have <a><i class="material-icons">location_on</i></a>locations</h4> -->
@@ -107,8 +105,8 @@
         </div>
           <div class="row container center-align">
             <div class="input-field col s3 offset-s3 right-align">
-              <div class="container">
-                <a id="play-btn" class="waves-effect waves-light btn" id="param-submit">Play</a>
+              <div id="play-btn" class="container">
+                <a class="waves-effect waves-light btn" id="param-submit">Play</a>
               </div>
             </div>
             <div class="input-field col s3 right-align">
@@ -119,10 +117,10 @@
           </div>
         </div>
       </form>
-    </main>
 <!-- footer -->
     <!--  -->
     </div>
+    </main>
     <footer class="page-footer">
          <div class="footer-copyright">
            <div class="container">
