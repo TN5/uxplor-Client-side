@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>uXplor Params</title>
-    <link rel="stylesheet" href="https://w3cj.github.io/materialize-themes/dist/css/materialize-cyan-lime.css">
-    <link rel="stylesheet" href="styles/params.css">
-    <link rel="icon" href="images/theicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
-    <header class="header">
-      <nav id="nav">
-        <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo center"><img src="pics/logoparams.png" alt="" /></a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="params.html">Play</a></li>
-            <li><a href="profile.html">Profile</a></li>
-          </ul>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <title>uXplor Params</title>
+  <link rel="stylesheet" href="https://w3cj.github.io/materialize-themes/dist/css/materialize-cyan-lime.css">
+  <link rel="stylesheet" href="styles/params.css">
+  <link rel="icon" href="pics/theicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <nav id="nav">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo center"><img src="pics/logoparams.png" alt="" /></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="params.html">Play</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
 
       <ul id="slide-out" class="side-nav">
-         <li><div class="userView">
-           <div class="background">
-             <img src="pics/dummyskyline.jpg">
-           </div>
-           <a href="#!user"><img class="circle" src="pics/dummyprofilepic.jpeg"></a>
-           <a href="#!name"><span class="white-text name">User</span></a>
-           <a href="#!email"><span class="white-text email">user@gmail.com</span></a>
-         </div></li>
-         <li><a class="waves-effect" href="#!">Play</a></li>
-         <li><a class="waves-effect" href="params.html">Set rules</a></li>
-         <li><div class="divider"></div></li>
-         <li><a class="subheader">Your profile</a></li>
-         <li><a class="waves-effect" href="#!">Badges</a></li>
-       </ul>
-       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      </nav>
-    </header>
-
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="pics/dummyskyline.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="pics/dummyprofilepic.jpeg"></a>
+            <a href="#!name"><span class="white-text name">User</span></a>
+            <a href="#!email"><span class="white-text email">user@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="#!">Play</a></li>
+        <li><a class="waves-effect" href="params.html">Set rules</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Your profile</a></li>
+        <li><a class="waves-effect" href="#!">Badges</a></li>
+      </ul>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    </nav>
+  </header>
+  <main>
 
     <div class="params-page">
-
-  <!-- main -->
-      <main class="form-section">
+      <section class="form-section">
         <form>
           <div class="row container center-align">
             <div class="input-field col s4 right-align">
-              <a  id="walk-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_walk</i></a>
+              <a id="walk-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_walk</i></a>
             </div>
             <div class="input-field col s4">
-              <a  id="bike-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_bike</i></a>
+              <a id="bike-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_bike</i></a>
             </div>
             <div class="input-field col s4 left-align">
-              <a  id="car-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_car</i></a>
+              <a id="car-btn" class="btn-floating btn-large waves-effect waves-light lime"><i class="material-icons">directions_car</i></a>
             </div>
           </div>
           <div id="params-input" class="row container center-align">
-            <div class="input-field col s3 right-align">
+            <div id="select-location" class="input-field col s3 right-align">
               <a id="decrementer" class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">remove</i></a>
             </div>
             <div class="input-field col s6 container center-align">
-              <input id="radius" type="text" class="center-align validate">
+              <input id="radius" type="text" id="radius" class="center-align validate">
               <label id="radius-label" for="radius">Radius&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             </div>
             <div class="input-field col s3 left-align">
@@ -70,23 +74,19 @@
           </div>
           <div class="row container center-align">
             <div class="input-field col s8 container offset-s2">
-              <select class="select cyan-text">
-                <option value="" disabled selected>Pick location type</option>
+              <select id="options" class="select cyan-text">
+                <option value="" disabled selected><h3>Pick location type<h3></option>
               </select>
             </div>
           </div>
           <div class="container center-align">
-            <a class="waves-effect waves-light btn" id="param-submit">Submit</a>
+            <a class="waves-effect waves-light btn disabled" id="param-submit">Submit</a>
           </div>
         </form>
-      </main>
-  <!-- footer -->
+      </section>
     </div>
 
-    <div class="game-setup">
-
-<!-- main -->
-    <main>
+    <section class="game-setup">
       <form>
         <div class="container center-align">
           <!-- <h4>You have <a><i class="material-icons">location_on</i></a>locations</h4> -->
@@ -105,36 +105,142 @@
             <a id="incrementer2" class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">add</i></a>
           </div>
         </div>
-          <div class="row container center-align">
-            <div class="input-field col s3 offset-s3 right-align">
-              <div id="play-btn" class="container">
-                <a class="waves-effect waves-light btn" id="param-submit">Play</a>
-              </div>
+        <div class="row container center-align">
+          <div class="input-field col s3 offset-s3 right-align">
+            <div id="play-btn" class="container">
+              <a class="waves-effect waves-light btn" id="param-submit">Play</a>
             </div>
-            <div class="input-field col s3 right-align">
-              <div class="container">
-                <a href="/params" class="waves-effect waves-light btn" id="new-search">New Search</a>
-              </div>
+          </div>
+          <div class="input-field col s3 right-align">
+            <div class="container">
+              <a href="/params" class="waves-effect waves-light btn" id="new-search">New Search</a>
             </div>
           </div>
         </div>
       </form>
-    </main>
-<!-- footer -->
-    <!--  -->
+    </section>
+
+    <section class="game-play">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <h5 class="center-align">Collect Your Next Badge At:</h5>
+                <p id="location-name" class="card-title center-align"></p>
+                <p id="location-address" class="center-align"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <!-- <h1 class="card-title center-align">Location Name</h1> -->
+                <h5 id="distance-to" class="center-align"></h5>
+                <div class="row">
+                  <div class="col s3 bar blue-bar">
+
+                  </div>
+                  <div class="col s3  bar yellow-bar">
+
+                  </div>
+                  <div class="col s3 bar orange-bar">
+
+                  </div>
+                  <div class="col s3 bar red-bar">
+
+                  </div>
+                </div>
+                <!-- MATERIALIZE THIS STUFF -->
+                <h3 class="center-align">North</h3>
+                <div id="arrow-container" class="">
+                  <div id="arrow-direction">
+                    <img src="pics/arrow.png">
+                  </div>
+                </div>
+                <h3 id="hotness-text" class="center-align"></h1>
+              </div>
+              <!-- <div class="card-action">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s2">
+          <div class="card">
+            <div class="card-image">
+              <a href="#modal1"><img class="flag-image" src="pics/flag.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden link to trigger badge modal -->
+    <a id="modal2-trigger" href="#modal2"></a>
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12">
+            <div class="card cyan">
+              <div class="card-content white-text">
+                <span class="card-title">Flag a Location</span>
+                <p>Please select the reason for flagging this location.</p>
+              </div>
+              <div class="card-action">
+                <form id="flag-form" class="form">
+
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test1" value="dangerous"/>
+                  <label for="test1">Dangerous</label>
+
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test2" value="inappropriate"/>
+                  <label for="test2">Inappropriate</label>
+
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test3" value="impractical"/>
+                  <label for="test3">Impractical</label>
+
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test4" value="other"/>
+                  <label for="test4">Other</label>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="flag-submit" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+      </div>
     </div>
-    <footer class="page-footer">
-         <div class="footer-copyright">
-           <div class="container">
-           © 2017 uXplor
-           <a id ="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
-           </div>
-         </div>
-    </footer>
+    <div id="modal2" class="modal">
+      <div id="badge" class="modal-content">
+        <div class="badge-container"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+      </div>
+    </div>
+    <section class="flag-modal"></section>
+  </main>
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 uXplor
+        <a id="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="scripts/params.js" charset="utf-8"></script>
+</body>
 
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-       <script src="scripts/params.js" charset="utf-8"></script>
-  </body>
 </html>

@@ -10,7 +10,7 @@ $(document).ready( function() {
 });
 
 $('#flagged').click(function() {
-  $.get('http://uxplor.herokuapp.com/flag', function(flagged) {
+  $.get('https://uxplor.herokuapp.com/flag', function(flagged) {
     var $list = $('#flags')
     $('#ratings').html('');
     $list.html('');

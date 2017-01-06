@@ -1,0 +1,8 @@
+pics/bertocoin.gif
+pics/casscoin.gif
+pics/kevincoin.gif
+pics/kylecoin.gif
+pics/mairincoin.gif
+pics/mattcoin.gif
+pics/mikecoin.gif
+pics/zaccoin.gif

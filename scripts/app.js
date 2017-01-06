@@ -5,6 +5,5 @@ $(document).ready( function() {
     closeOnClick: true,
     draggable: true
   }
-);
-  $('.parallax').parallax();
+  );  
 });
