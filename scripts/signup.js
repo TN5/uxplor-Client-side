@@ -1,6 +1,7 @@
 $(document).ready(function() {
   getHostURL();
   createNewUser();
+  userSignin();
 })
 
 function createNewUser() {
@@ -16,8 +17,10 @@ function createNewUser() {
     });
 
     $.post('http://localhost:3000/auth/signup', user, function(user){
-      console.log(user);
-    }).catch(function(error){
+      window.location=`params.html/id=${user.id}`
+    })
+    //fix redirect 
+    .catch(function(error){
       console.log(error);
     })
   })
