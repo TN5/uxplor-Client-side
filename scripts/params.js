@@ -231,4 +231,9 @@ function directionPointer(y, x) {
     angle += 180;
   }
   console.log(angle);
+  rotateArrow(-angle);
+}
+
+function rotateArrow(angle) {
+  $('#arrow-direction').css('transform', `rotate(${angle}deg`);
 }

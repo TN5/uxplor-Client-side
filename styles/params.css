@@ -101,3 +101,19 @@ input.select-dropdown {
   height: 2.34em;
   border: 1px solid black
 }
+
+#arrow-container {
+  background-color: transparent;
+  margin: auto;
+  width: 15em;
+}
+
+#arrow-direction {
+  margin: 0;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: rotate(0deg);
+  transition: transform 2s;
+  overflow: hidden;
+}
