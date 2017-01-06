@@ -9,6 +9,10 @@ main {
   flex: 1 0 auto;
 }
 
+.logo-image {
+  height: 2em;
+}
+
 .star {
 margin-top: .25em;
 padding-right: .25em;
