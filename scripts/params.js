@@ -42,8 +42,8 @@ function success(pos) {
 
 $('#param-submit').click(function() {
   var radius = parseInt($('#radius').val()) * .3048;
-  var type = $('select.select').val();
-  if (type != '' && !isNaN(radius)){
+  var type = $('input.select-dropdown').val();
+  if (type != 'Pick location type' && !isNaN(radius)){
     var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
     $.get(url, function(data) {
       data = JSON.parse(data);
