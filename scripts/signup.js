@@ -16,10 +16,10 @@ function createNewUser() {
       this.reset();
     });
 
-    $.post('http://localhost:3000/auth/signup', user, function(user){
+    $.post('https://uxplor.herokuapp.com/auth/signup', user, function(user){
       window.location=`params.html/id=${user.id}`
     })
-    //fix redirect 
+    //fix redirect
     .catch(function(error){
       console.log(error);
     })

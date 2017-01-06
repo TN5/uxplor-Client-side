@@ -8,7 +8,7 @@ function userSignin() {
     $('#signin-form').each(function(){
       this.reset();
     });
-    $.post('http://localhost:3000/auth/signin', user)
+    $.post('https://uxplor.herokuapp.com/auth/signin', user)
     .then(function(result){
       console.log(result);
       // redirect
