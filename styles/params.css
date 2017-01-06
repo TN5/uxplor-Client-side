@@ -105,7 +105,7 @@ input.select-dropdown {
 #arrow-container {
   background-color: transparent;
   margin: auto;
-  width: 15em;
+  width: 14.2em;
 }
 
 #arrow-direction {
@@ -116,8 +116,5 @@ input.select-dropdown {
   transform: rotate(0deg);
   transition: transform 2s;
   overflow: hidden;
-}
-
-#arrow-direction img {
-  
+  background-color: white;
 }
