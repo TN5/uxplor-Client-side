@@ -12,7 +12,7 @@ function userSignin() {
     .then(function(result){
       console.log(result);
       // redirect
-      window.location=`/params`
+      window.location=`/params.html`
     }).catch(function(error){
       console.log(error);
     })
