@@ -9,6 +9,11 @@ main {
   flex: 1 0 auto;
 }
 
+/*Margin between nav and initial content*/
+.main {
+  margin-top: 2em;
+}
+
 .logo-image {
   height: 2em;
 }
@@ -27,11 +32,6 @@ padding-left: .25em;
   display: flex;
   flex-direction:row;
   justify-content: center;
-}
-
-/*Margin between nav and initial content*/
-.starmarg {
-  margin-top: 2em;
 }
 
 .winbutton {
