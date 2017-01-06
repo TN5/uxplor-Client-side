@@ -168,7 +168,6 @@ $('#play-btn').click(function() {
 function displayLocationInfo(ray) {
   if(ray.length > 0) {
     locationObj = ray.pop();
-    console.log(locationObj);
     $('#location-name').text(locationObj.name);
     $('#location-address').text(locationObj.address);
     distanceToLocation(locationObj.lat, locationObj.long);
@@ -190,6 +189,18 @@ function distanceToLocation(lat, long) {
 
 $('#flag-submit, #badge').click(function() {
   displayLocationInfo(gameLocRay);
+  console.log(locationObj);
+  let flagObj = {
+    flag_type : $('.flag-reason[name=flag-reason]:checked').val(),
+    google_id: locationObj.id,
+    user_id: 1,
+    name: locationObj.name,
+    flagged: true
+  }
+  console.log($('.flag-reason[name=flag-reason]:checked').val());
+  // $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
+  //   console.log(data);
+  // });
 });
 
 function hotness(hot) {
@@ -204,7 +215,7 @@ function hotness(hot) {
     $('.yellow-bar').css('background-color', '#FFF359');
   }
 
-  $('#hotness-text').text(`You're Cold!`);
+  $('#hotness-text').text(`You're Cold!`).css('color', 'white');
   if (hot <= 150) {
     $('#hotness-text').text(`You're on Fire!`).css('color', '#c30000');
   } else if (hot <= 300) {
@@ -223,14 +234,9 @@ function hotness(hot) {
 
 function directionPointer(y, x) {
   let angle = Math.round((Math.atan(y/x) * 57.2958));
-  console.log(Math.round(x), Math.round(y));
-  console.log((Math.atan(1/2) * 57.2958));
-  console.log((Math.atan((-1)/2) * 57.2958));
-
   if(x < 0) {
     angle += 180;
   }
-  console.log(angle);
   rotateArrow(-angle);
 }
 
