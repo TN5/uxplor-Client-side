@@ -22,9 +22,9 @@ $('#flagged').click(function() {
       $list.append(`
         <li class="collection-item">
           <span class="title">Name: ${name}</span>
-          <p>Google ID: ${googleId} <br>
-             Type: ${type} <br>
-             User ID: ${userId}
+          <p>Google ID: <span class="googleid">${googleId}<span> <br>
+             Type: <span class="type">${type}<span> <br>
+             User ID: <span class="userid">${userId}<span>
           </p>
         </li>
 
