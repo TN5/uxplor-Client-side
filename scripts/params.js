@@ -19,7 +19,6 @@ $(document).ready(function(){
 
 var badgeRay = [];
 var locationObj = {};
-console.log(locationObj);
 var longitude;
 var latitude;
 var placesRay = [];
@@ -118,7 +117,7 @@ function changeRadius(coef) {
     change = 200;
   }
   radius += (change * coef);
-  $('#radius').val(`${radius}ft`);
+  $('#radius').val(`${radius} ft`);
 }
 
 $('#incrementer2').click(function() {
@@ -143,11 +142,9 @@ function createScavengeLocationArray() {
   for(var i = 0; i < newLen; i++) {
     let tempObj = {};
     var index = Math.floor(Math.random() * placesRay.length);
-    console.log(placesRay.length, index);
     ray.push(makePlaceObj(placesRay[index]));
     placesRay.splice(index, 1);
   }
-  console.log(ray);
   return ray;
 }
 
@@ -163,7 +160,6 @@ function makePlaceObj(item) {
 
 $('#play-btn').click(function() {
   gameLocRay = createScavengeLocationArray();
-  console.log(gameLocRay);
   $('.game-setup').fadeOut(250);
   $('.game-play').delay(250).fadeIn(250);
   displayLocationInfo(gameLocRay);
@@ -185,10 +181,10 @@ function distanceToLocation(lat, long) {
   let deltaLat = lat - latitude;
   let deltaLong = long - longitude;
   let distLat = deltaLat * 365221.43;
-  let distLong = deltaLong * (365221.43 * Math.sin((90 - long) * .0174533));
+  let distLong = deltaLong * (365221.43 * Math.sin((90 - lat) * .0174533));
   let distance = Math.sqrt((distLat * distLat) + (distLong * distLong));
   hotness(distance);
-  console.log(distLat, distLong, distance);
+  directionPointer(distLat, distLong);
   $('#distance-to').text(`${Math.ceil(distance)} ft to ${locationObj.name}`);
 }
 
@@ -223,5 +219,16 @@ function hotness(hot) {
     $('.badge-container').append(`<img src="${badgeRay[index]}"/>`);
     $('#modal2-trigger').click();
   }
+}
 
+function directionPointer(y, x) {
+  let angle = Math.round((Math.atan(y/x) * 57.2958));
+  console.log(Math.round(x), Math.round(y));
+  console.log((Math.atan(1/2) * 57.2958));
+  console.log((Math.atan((-1)/2) * 57.2958));
+
+  if(x < 0) {
+    angle += 180;
+  }
+  console.log(angle);
 }
