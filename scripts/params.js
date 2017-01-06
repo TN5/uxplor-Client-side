@@ -17,6 +17,7 @@ $(document).ready(function(){
   });
 })
 
+var badgeRay = [];
 var locationObj = {};
 console.log(locationObj);
 var longitude;
@@ -28,6 +29,10 @@ var options = {
   timeout: 5000,
   maximumAge: 0
 };
+
+$.get('badges.txt', function(data) {
+  badgeRay = data.split('\n');
+});
 
 function success(pos) {
   var crd = pos.coords;
@@ -193,23 +198,30 @@ $('#flag-submit, #badge').click(function() {
 
 function hotness(hot) {
   $('.blue-bar, .red-bar, .orange-bar, .yellow-bar').css('background-color', '#90d9e1');
-  if (hot <= 500) {
+  if (hot <= 150) {
     $('.red-bar').css('background-color', '#c30000');
   }
-  if (hot <= 1000) {
+  if (hot <= 300) {
     $('.orange-bar').css('background-color', '#e27f00');
   }
-  if (hot <= 3000) {
+  if (hot <= 450) {
     $('.yellow-bar').css('background-color', '#FFF359');
   }
 
   $('#hotness-text').text(`You're Cold!`);
-  if (hot <= 500) {
+  if (hot <= 150) {
     $('#hotness-text').text(`You're on Fire!`).css('color', '#c30000');
-  } else if (hot <= 1000) {
+  } else if (hot <= 300) {
     $('#hotness-text').text(`You're Gettin Hot!`).css('color', '#e27f00');;
-  } else if (hot <= 3000) {
+  } else if (hot <= 450) {
     $('#hotness-text').text(`You're Warming Up!`).css('color', '#FFF359');;
+  }
+
+  if (hot < 50) {
+    let index = Math.floor(Math.random() * badgeRay.length);
+    $('.badge-container').empty();
+    $('.badge-container').append(`<img src="${badgeRay[index]}"/>`);
+    $('#modal2-trigger').click();
   }
 
 }
