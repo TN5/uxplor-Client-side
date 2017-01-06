@@ -17,7 +17,7 @@ function createNewUser() {
     });
 
     $.post('https://uxplor.herokuapp.com/auth/signup', user, function(user){
-      window.location=`params.html/id=${user.id}`
+      window.location='/params.html'
     })
     //fix redirect
     .catch(function(error){
