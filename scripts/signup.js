@@ -22,3 +22,23 @@ function createNewUser() {
     })
   })
 }
+
+function userSignin() {
+  $('#submit-signin').click(function(event) {
+    event.preventDefault();
+    console.log('signin');
+    var user = {
+      email: $('#new-email').val(),
+      password: $('#new-password').val()
+    }
+    // $('#signin-form').each(function(){
+    //   this.reset();
+    // });
+
+    // $.post('http://localhost:3000/auth/signin', user, function(user){
+    //   console.log(user);
+    // }).catch(function(error){
+    //   console.log(error);
+    // })
+  })
+}
