@@ -212,4 +212,8 @@ function hotness(hot) {
     $('#hotness-text').text(`You're Warming Up!`).css('color', '#FFF359');;
   }
 
+  if (hot < 1000) {
+    $('#modal2-trigger').click();
+  }
+
 }
