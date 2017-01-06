@@ -44,7 +44,6 @@
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     </nav>
   </header>
-
   <main>
 
     <div class="params-page">
@@ -154,6 +153,13 @@
 
                   </div>
                 </div>
+                <!-- MATERIALIZE THIS STUFF -->
+                <h3 class="center-align">North</h3>
+                <div id="arrow-container" class="">
+                  <div id="arrow-direction">
+                    <img src="pics/arrow.png">
+                  </div>
+                </div>
                 <h3 id="hotness-text" class="center-align"></h1>
               </div>
               <!-- <div class="card-action">
@@ -188,18 +194,18 @@
                 <p>Please select the reason for flagging this location.</p>
               </div>
               <div class="card-action">
-                <form class="form">
+                <form id="flag-form" class="form">
 
-                  <input name="group1" type="radio" id="test1" />
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test1" value="dangerous"/>
                   <label for="test1">Dangerous</label>
 
-                  <input name="group2" type="radio" id="test2" />
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test2" value="inappropriate"/>
                   <label for="test2">Inappropriate</label>
 
-                  <input name="group3" type="radio" id="test3" />
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test3" value="impractical"/>
                   <label for="test3">Impractical</label>
 
-                  <input name="group4" type="radio" id="test4" />
+                  <input class="flag-reason" name="flag-reason" type="radio" id="test4" value="other"/>
                   <label for="test4">Other</label>
 
                 </form>
@@ -213,25 +219,16 @@
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
       </div>
     </div>
-
     <div id="modal2" class="modal">
       <div id="badge" class="modal-content">
-        <div class="badge-container">
-
-        </div>
+        <div class="badge-container"></div>
       </div>
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
       </div>
     </div>
-
-    <section class="flag-modal">
-
-    </section>
-
-
+    <section class="flag-modal"></section>
   </main>
-
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
@@ -240,7 +237,6 @@
       </div>
     </div>
   </footer>
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
