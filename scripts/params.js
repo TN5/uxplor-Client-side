@@ -22,6 +22,7 @@ console.log(locationObj);
 var longitude;
 var latitude;
 var placesRay = [];
+let gameLocRay = [];
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -156,7 +157,7 @@ function makePlaceObj(item) {
 }
 
 $('#play-btn').click(function() {
-  let gameLocRay = createScavengeLocationArray();
+  gameLocRay = createScavengeLocationArray();
   console.log(gameLocRay);
   $('.game-setup').fadeOut(250);
   $('.game-play').delay(250).fadeIn(250);
@@ -164,11 +165,15 @@ $('#play-btn').click(function() {
 });
 
 function displayLocationInfo(ray) {
-  locationObj = ray.pop();
-  console.log(locationObj);
-  $('#location-name').text(locationObj.name);
-  $('#location-address').text(locationObj.address);
-  distanceToLocation(locationObj.lat, locationObj.long);
+  if(ray.length > 0) {
+    locationObj = ray.pop();
+    console.log(locationObj);
+    $('#location-name').text(locationObj.name);
+    $('#location-address').text(locationObj.address);
+    distanceToLocation(locationObj.lat, locationObj.long);
+  } else {
+    window.location = 'win.html';
+  }
 }
 
 function distanceToLocation(lat, long) {
@@ -177,6 +182,34 @@ function distanceToLocation(lat, long) {
   let distLat = deltaLat * 365221.43;
   let distLong = deltaLong * (365221.43 * Math.sin((90 - long) * .0174533));
   let distance = Math.sqrt((distLat * distLat) + (distLong * distLong));
+  hotness(distance);
   console.log(distLat, distLong, distance);
-  $('#distance-to').text(`${Math.ceil(distance)}ft to ${locationObj.name}`);
+  $('#distance-to').text(`${Math.ceil(distance)} ft to ${locationObj.name}`);
+}
+
+$('#flag-submit, #badge').click(function() {
+  displayLocationInfo(gameLocRay);
+});
+
+function hotness(hot) {
+  $('.blue-bar, .red-bar, .orange-bar, .yellow-bar').css('background-color', '#90d9e1');
+  if (hot <= 500) {
+    $('.red-bar').css('background-color', '#c30000');
+  }
+  if (hot <= 1000) {
+    $('.orange-bar').css('background-color', '#e27f00');
+  }
+  if (hot <= 3000) {
+    $('.yellow-bar').css('background-color', '#FFF359');
+  }
+
+  $('#hotness-text').text(`You're Cold!`);
+  if (hot <= 500) {
+    $('#hotness-text').text(`You're on Fire!`).css('color', '#c30000');
+  } else if (hot <= 1000) {
+    $('#hotness-text').text(`You're Gettin Hot!`).css('color', '#e27f00');;
+  } else if (hot <= 3000) {
+    $('#hotness-text').text(`You're Warming Up!`).css('color', '#FFF359');;
+  }
+
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
   display: flex;
   min-height: 100vh;
@@ -7,10 +7,6 @@ body {
 
 main {
   flex: 1 0 auto;
-=======
-#nav {
-  padding-bottom: 5vh;
->>>>>>> 2936269f3598b11533472848c2848f3873777a16
 }
 
 .star {

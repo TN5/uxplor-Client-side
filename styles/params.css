@@ -95,3 +95,9 @@ input.select-dropdown {
 .card-image.flag-image {
   height: 2em;
 }
+
+.bar {
+  margin-top: 2em;
+  height: 2.34em;
+  border: 1px solid black
+}
