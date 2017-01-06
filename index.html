@@ -45,7 +45,7 @@
           <div id="signin" class="card-panel hoverable">
             <span class="card-title">Sign In</span>
             <div class="row">
-              <form class="col s12">
+              <form id="signin-form" class="col s12">
                 <div class="row">
                   <div class="input-field col s12">
                     <input id="password" type="password" class="validate">
@@ -59,7 +59,7 @@
                   </div>
                 </div>
                 <div class="container">
-                  <a href="#" class="waves-effect waves-light btn" id="submit-signin">sign in</a>
+                  <button type="submit" class="waves-effect waves-light btn" id="submit-signin">sign in</button>
                 </div>
               </form>
             </div>
@@ -69,7 +69,7 @@
           <div id="signup" class="card-panel hoverable">
             <span class="card-title">Create Account</span>
             <div class="row">
-              <form class="col s12">
+              <form id="signup-form" class="col s12">
                 <div class="row">
                   <div class="input-field col s6">
                     <input id="new_first_name" type="text" class="validate">
@@ -82,18 +82,18 @@
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="new-password" type="password" class="validate" >
                     <label for="password">Password</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
+                    <input id="new-email" type="email" class="validate" >
+                    <label for="new-email">Email</label>
                   </div>
                 </div>
                 <div class="container">
-                  <a href="#" class="waves-effect waves-light btn" id="submit-signup">sign up</a>
+                  <button type="submit" href="/params.html" class="waves-effect waves-light btn" id="submit-signup">sign up</button>
                 </div>
               </form>
             </div>
@@ -114,5 +114,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="scripts/app.js" charset="utf-8"></script>
+    <script src="scripts/shared.js" charset="utf-8"></script>
+    <script src="scripts/signup.js" charset="utf-8"></script>
   </body>
 </html>
