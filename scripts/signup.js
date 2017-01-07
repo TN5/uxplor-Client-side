@@ -1,6 +1,7 @@
 $(document).ready(function() {
   getHostURL();
   createNewUser();
+  userSignin();
 })
 
 function createNewUser() {
@@ -15,9 +16,11 @@ function createNewUser() {
       this.reset();
     });
 
-    $.post('http://localhost:3000/auth/signup', user, function(user){
-      console.log(user);
-    }).catch(function(error){
+    $.post('https://uxplor.herokuapp.com/auth/signup', user, function(user){
+      window.location='/params.html'
+    })
+    //fix redirect
+    .catch(function(error){
       console.log(error);
     })
   })
