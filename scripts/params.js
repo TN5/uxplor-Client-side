@@ -188,19 +188,24 @@ function distanceToLocation(lat, long) {
 }
 
 $('#flag-submit, #badge').click(function() {
-  displayLocationInfo(gameLocRay);
-  console.log(locationObj);
-  let flagObj = {
-    flag_type : $('.flag-reason[name=flag-reason]:checked').val(),
-    google_id: locationObj.id,
-    user_id: 1,
-    name: locationObj.name,
-    flagged: true
+  if($('.flag-reason[name=flag-reason]:checked').val() != undefined){
+    displayLocationInfo(gameLocRay);
+    console.log(locationObj);
+    let flagObj = {
+      flag_type : $('.flag-reason[name=flag-reason]:checked').val(),
+      google_id: locationObj.id,
+      user_id: 1,
+      name: locationObj.name,
+      flagged: true
+    }
+    console.log($('.flag-reason[name=flag-reason]:checked').val());
+    // $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
+    //   console.log(data);
+    // });
+  } else {
+    alert("You must select a value or press cancel.")
   }
-  console.log($('.flag-reason[name=flag-reason]:checked').val());
-  // $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
-  //   console.log(data);
-  // });
+  
 });
 
 function hotness(hot) {
