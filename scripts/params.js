@@ -33,7 +33,6 @@ var options = {
 $.get('badges.txt', function(data) {
   badgeRay = data.split('\n');
   badgeRay.pop();
-  console.log(badgeRay)
 });
 
 function success(pos) {
