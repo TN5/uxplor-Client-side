@@ -9,19 +9,16 @@ function userSignin() {
     $('#signin-form').each(function(){
       this.reset();
     });
-    $.post('https://uxplor.herokuapp.com/auth/signin', user)
-    .then(function(result){
-      console.log(result);
+    $.post('https://uxplor.herokuapp.com/auth/signin', user, function(){
+      console.log(user);
       // redirect
-      var userName = $("#user-name").text();
-      var userPassword = $('#password').text();
-
-      console.log(userName, userPassword);
-
+      // var userName = $("#user-name").text();
+      var userEmail = $('#user-email').text();
       $('.button-collapse').sideNav('show');
-      userName = $('#email').val();
-      userPassword = $('#password').val();
       // window.location=`/params.html`
+      userEmail = user.email;
+      console.log(userEmail);
+
     })
     .catch(function(error){
       console.log(error);
