@@ -188,6 +188,13 @@ function distanceToLocation(lat, long) {
 }
 
 $('#flag-submit, #badge').click(function() {
+  if (gameLocRay.length = 1) {
+    $('#countdown-text').text(`You have 1 location to go.`);
+  } else if (gameLocRay.length = 0) {
+    $('#countdown-text').text(`This is your last location.`);
+  } else {
+    $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
+  }
   if($('.flag-reason[name=flag-reason]:checked').val() != undefined){
     displayLocationInfo(gameLocRay);
     console.log(locationObj);
