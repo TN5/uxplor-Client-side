@@ -205,7 +205,7 @@ $('#flag-submit, #badge').click(function() {
   } else {
     alert("You must select a value or press cancel.")
   }
-  
+  $('.flag-reason').prop('checked', false)
 });
 
 function hotness(hot) {
