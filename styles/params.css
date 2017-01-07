@@ -118,3 +118,24 @@ input.select-dropdown {
   overflow: hidden;
   background-color: white;
 }
+
+#modal1, #modal2 {
+  background-color: #00bcd4;
+}
+
+#modal1-footer, #modal2-footer {
+  background-color: #cddc39;
+}
+
+#flag-form label {
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+}
+
+.flag-instructions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

@@ -162,23 +162,15 @@
                 </div>
                 <h3 id="hotness-text" class="center-align"></h1>
               </div>
-              <!-- <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
-              </div> -->
-            </div>
+              <div class="card-action">
+                <a href="#modal1"><img class="flag-image" src="pics/flag.png"></a>
+                <!-- <a href="#">This is a link</a> -->
+              </div>
+            </div>``
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col s2">
-          <div class="card">
-            <div class="card-image">
-              <a href="#modal1"><img class="flag-image" src="pics/flag.png"></a>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
 
     <!-- Hidden link to trigger badge modal -->
@@ -186,48 +178,37 @@
 
     <div id="modal1" class="modal">
       <div class="modal-content">
-        <div class="row">
-          <div class="col s12">
-            <div class="card cyan">
-              <div class="card-content white-text">
-                <span class="card-title">Flag a Location</span>
-                <p>Please select the reason for flagging this location.</p>
-              </div>
-              <div class="card-action">
-                <form id="flag-form" class="form">
+        <h3 class="flag-title center-align white-text">Flag a Location</h3>
+        <h5 class="flag-instructions center-align white-text">Please select a reason for flagging this location</h5>
+        <form id="flag-form" class="form">
+          <input class="flag-reason" name="flag-reason" type="radio" id="test1" value="dangerous"/>
+          <label for="test1">Dangerous</label>
 
-                  <input class="flag-reason" name="flag-reason" type="radio" id="test1" value="dangerous"/>
-                  <label for="test1">Dangerous</label>
+          <input class="flag-reason" name="flag-reason" type="radio" id="test2" value="inappropriate"/>
+          <label for="test2">Inappropriate</label>
 
-                  <input class="flag-reason" name="flag-reason" type="radio" id="test2" value="inappropriate"/>
-                  <label for="test2">Inappropriate</label>
+          <input class="flag-reason" name="flag-reason" type="radio" id="test3" value="impractical"/>
+          <label for="test3">Impractical</label>
 
-                  <input class="flag-reason" name="flag-reason" type="radio" id="test3" value="impractical"/>
-                  <label for="test3">Impractical</label>
-
-                  <input class="flag-reason" name="flag-reason" type="radio" id="test4" value="other"/>
-                  <label for="test4">Other</label>
-
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+          <input class="flag-reason" name="flag-reason" type="radio" id="test4" value="other"/>
+          <label for="test4">Other</label>
+        </form>
       </div>
-      <div class="modal-footer">
+      <div id="modal1-footer" class="modal-footer">
         <a id="flag-submit" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
       </div>
     </div>
+
     <div id="modal2" class="modal">
       <div id="badge" class="modal-content">
         <div class="badge-container"></div>
       </div>
-      <div class="modal-footer">
+      <div id="modal2-footer" class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
       </div>
     </div>
-    <section class="flag-modal"></section>
+    <!-- <section class="flag-modal"></section> -->
   </main>
   <footer class="page-footer">
     <div class="footer-copyright">
