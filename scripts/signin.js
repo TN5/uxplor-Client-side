@@ -1,4 +1,5 @@
 function userSignin() {
+
   $('#submit-signin').click(function(event) {
     event.preventDefault();
     var user = {
@@ -12,8 +13,17 @@ function userSignin() {
     .then(function(result){
       console.log(result);
       // redirect
-      window.location=`/params.html`
-    }).catch(function(error){
+      var userName = $("#user-name").text();
+      var userPassword = $('#password').text();
+
+      console.log(userName, userPassword);
+
+      $('.button-collapse').sideNav('show');
+      userName = $('#email').val();
+      userPassword = $('#password').val();
+      // window.location=`/params.html`
+    })
+    .catch(function(error){
       console.log(error);
     })
   })
