@@ -104,6 +104,11 @@ input.select-dropdown {
   height: 2em;
 }
 
+.flag-image {
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
 .bar {
   margin-top: 2em;
   height: 2.34em;
@@ -146,4 +151,16 @@ input.select-dropdown {
 .flag-instructions {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.extrapadding {
+  padding: 2em;
+  padding-bottom: 0;
+  align-self: flex-end;
+  font-size: 14pt;
+}
+
+.flexer {
+  display: flex;
+  justify-content: space-between;
 }
