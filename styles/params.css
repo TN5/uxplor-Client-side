@@ -8,6 +8,14 @@ main {
   flex: 1 0 auto;
 }
 
+.logo-image {
+  height: 2em;
+}
+
+footer.page-footer {
+  padding: 0;
+}
+
 #brand {
   width: 70%;
   height: auto;
@@ -28,9 +36,9 @@ main {
   margin-top: 20em;
 }
 
-.material-icons {
+/*.material-icons {
   font-size: 60px;
-}
+}*/
 
 #params-input {
   display: flex;
@@ -53,11 +61,11 @@ main {
 
 .row {}
 
-nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+/*nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
   display: block;
   font-size: 7em;
-  /*padding-top: 1em;*/
-}
+  padding-top: 1em;
+}*/
 
 .dropdown-content li>a, .dropdown-content li>span {
   color: #00bcd4;

@@ -1,4 +1,11 @@
 $(document).ready( function() {
+  $('.button-collapse').sideNav({
+    menuWidth: 300,
+    edge: 'left',
+    closeOnClick: true,
+    draggable: true
+  });
+  
   var id = 1;
   var url = 'http://localhost:3000/badge/1'
   $.get(url, function(data){

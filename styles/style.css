@@ -17,6 +17,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.logo-image {
+  height: 2em;
+}
+
+footer.page-footer {
+  padding: 0;
+}
+
 #nav-mobile{
   margin-right: 2em;
 }
