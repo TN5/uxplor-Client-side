@@ -119,11 +119,11 @@ input.select-dropdown {
   background-color: white;
 }
 
-#modal1 {
+#modal1, #modal2 {
   background-color: #00bcd4;
 }
 
-#modal1-footer {
+#modal1-footer, #modal2-footer {
   background-color: #cddc39;
 }
 
