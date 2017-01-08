@@ -15,9 +15,9 @@ function createNewUser() {
     $('#signup-form').each(function(){
       this.reset();
     });
-
-    $.post('https://uxplor.herokuapp.com/auth/signup', user, function(user){
-      window.location='/params.html'
+    // 'https://uxplor.herokuapp.com/auth/signup'
+    $.post('http://localhost:3000/signup', user, function(user){
+      // window.location='/params.html'
     })
     //fix redirect
     .catch(function(error){
