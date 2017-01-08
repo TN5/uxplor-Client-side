@@ -201,9 +201,9 @@ $('#flag-submit').click(function() {
       flagged: true
     }
     console.log($('.flag-reason[name=flag-reason]:checked').val());
-    // $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
-    //   console.log(data);
-    // });
+    $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
+      console.log(data);
+    });
   } else {
     alert("You must select a value or press cancel.")
   }
