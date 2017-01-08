@@ -2,5 +2,24 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 1em auto;
+  margin-top: 2em;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.logo-image {
+  height: 2em;
+}
+
+footer.page-footer {
+  padding: 0;
 }

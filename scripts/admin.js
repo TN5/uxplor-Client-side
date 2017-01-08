@@ -12,7 +12,7 @@ $(document).ready( function() {
 $('#flagged').click(function() {
   $.get('https://uxplor.herokuapp.com/flag', function(flagged) {
     var $list = $('#flags')
-    $('#ratings').html('');
+    // $('#ratings').html('');
     $list.html('');
     for (var i = 0; i < flagged.length; i++) {
       if (flagged[i].flagged === true) {
@@ -58,7 +58,7 @@ $('#flagged').click(function() {
 $('#rating').click(function() {
   $.get('https://uxplor.herokuapp.com/feedback', function(rating) {
     var $ratings = $('#ratings')
-    $('#flags').html('');
+    // $('#flags').html('');
     $ratings.html('');
     for (var i = rating.length -1; i > -1; i--) {
       var id = rating[i].id;

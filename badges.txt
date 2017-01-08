@@ -1,5 +1,6 @@
 pics/bertocoin.gif
 pics/casscoin.gif
+pics/cjcoin.gif
 pics/kevincoin.gif
 pics/kylecoin.gif
 pics/mairincoin.gif
