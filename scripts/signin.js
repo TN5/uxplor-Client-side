@@ -11,12 +11,11 @@ function userSignin() {
     });
     $.post('https://uxplor.herokuapp.com/auth/signin', user, function(){
       console.log(user);
-      // redirect
-      // var userName = $("#user-name").text();
-      var userEmail = $('#user-email').text();
+
+      // window.location=`/index.html?id=${user.id}`
+      var userEmail = $('#user-email').text(user.email);
+      userName =  $('#user-name').text(user.name);
       $('.button-collapse').sideNav('show');
-      // window.location=`/params.html`
-      userEmail = user.email;
       console.log(userEmail);
 
     })
