@@ -42,7 +42,7 @@ $('#flagged').click(function() {
         var flags = flagged[i].id
         $($('#unflag' + flagged[i].id)[0]).click(function() {
           $.ajax({
-            url: `https://uxplor.heroku.com/flag/${flags}`,
+            url: `https://uxplor.herokuapp.com/flag/${flags}`,
             method: 'PUT',
             data: obj,
             success: function(response) {
