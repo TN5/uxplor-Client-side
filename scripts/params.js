@@ -23,6 +23,7 @@ var longitude;
 var latitude;
 var placesRay = [];
 let gameLocRay = [];
+let userID = 1;
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -31,6 +32,7 @@ var options = {
 
 $.get('badges.txt', function(data) {
   badgeRay = data.split('\n');
+  badgeRay.pop();
 });
 
 function success(pos) {
@@ -187,7 +189,7 @@ function distanceToLocation(lat, long) {
   $('#distance-to').text(`${Math.ceil(distance)} ft to ${locationObj.name}`);
 }
 
-$('#flag-submit, #badge').click(function() {
+$('#flag-submit').click(function() {
   if($('.flag-reason[name=flag-reason]:checked').val() != undefined){
     displayLocationInfo(gameLocRay);
     console.log(locationObj);
@@ -205,7 +207,30 @@ $('#flag-submit, #badge').click(function() {
   } else {
     alert("You must select a value or press cancel.")
   }
+  if (gameLocRay.length === 1) {
+    $('#countdown-text').text(`You have 1 location to go.`);
+  } else if (gameLocRay.length === 0) {
+    $('#countdown-text').text(`This is your last location.`);
+  } else {
+    $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
+  }
   $('.flag-reason').prop('checked', false)
+});
+
+$('#badge').click (function () {
+  if (gameLocRay.length === 1) {
+    $('#countdown-text').text(`You have 1 location to go.`);
+  } else if (gameLocRay.length === 0) {
+    $('#countdown-text').text(`This is your last location.`);
+  } else {
+    $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
+  }
+  console.log(badgeRay)
+  // let badgeObj = {
+  //   user_id: userID,
+  //   name:
+  // }
+  $.post(`https://uxplor.herokuapp.com/badge`, badgeObj)
 });
 
 function hotness(hot) {
