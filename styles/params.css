@@ -164,3 +164,11 @@ input.select-dropdown {
   display: flex;
   justify-content: space-between;
 }
+
+.badge-container {
+  align-self: center;
+}
+
+.white-back {
+  background-color: white;
+}
