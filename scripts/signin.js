@@ -9,9 +9,8 @@ function userSignin() {
     $('#signin-form').each(function(){
       this.reset();
     });
-    $.post('http://localhost:3000/auth/signin', user, function(){
+    $.post('https://uxplor.herokuapp.com/auth/signin', user, function(){
       console.log(user);
-
       // window.location=`/index.html?id=${user.id}`
       var userEmail = $('#user-email').text(user.email);
       $('.button-collapse').sideNav('show');
