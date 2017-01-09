@@ -50,7 +50,7 @@ $('#param-submit').click(function() {
   var radius = parseInt($('#radius').val()) * .3048;
   var type = $('input.select-dropdown').val();
   if (type != 'Pick location type' && !isNaN(radius)){
-    var url = `https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}`;
+    var url = 'https://uxplor.herokuapp.com/getlist?location=${latitude},${longitude}&radius=${radius}&type=${type}';
     $.get(url, function(data) {
       data = JSON.parse(data);
       placesRay = data.results;
@@ -230,7 +230,7 @@ $('#badge').click (function () {
   //   user_id: userID,
   //   name:
   // }
-  $.post(`https://uxplor.herokuapp.com/badge`, badgeObj)
+  $.post('https://uxplor.herokuapp.com/badge', badgeObj)
 });
 
 function hotness(hot) {

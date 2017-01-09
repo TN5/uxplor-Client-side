@@ -11,6 +11,7 @@ function userSignin() {
     });
     $.post('https://uxplor.herokuapp.com/auth/signin', user, function(){
       console.log(user);
+
       // window.location=`/index.html?id=${user.id}`
       var userEmail = $('#user-email').text(user.email);
       $('.button-collapse').sideNav('show');

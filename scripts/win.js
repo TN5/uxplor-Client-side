@@ -28,7 +28,7 @@ $(document).ready(function() {
       rating: star
     }
     console.log(ratingObject);
-    var url = 'https://uxplor.herokuapp.com/feedback'
+    var url = `${API_URL}/feedback`;
     $.post(url, ratingObject, function(result){
       console.log(result)
     });
