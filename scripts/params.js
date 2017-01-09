@@ -230,7 +230,9 @@ $('#badge').click (function () {
   //   user_id: userID,
   //   name:
   // }
-  $.post(`https://uxplor.herokuapp.com/badge`, badgeObj)
+  //$.post(`https://uxplor.herokuapp.com/badge`, badgeObj)
+  displayLocationInfo(gameLocRay);
+
 });
 
 function hotness(hot) {
