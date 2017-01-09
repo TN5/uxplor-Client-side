@@ -1,0 +1,31 @@
+@media (max-width: 768px) and (orientation: portrait) {
+  #incrementer {
+    height: 5em;
+    width: 5em;
+  }
+
+  #incrementer i {
+    font-size: 3.25em;
+  }
+
+  #decrementer {
+    height: 5em;
+    width: 5em;
+  }
+
+  #decrementer i {
+    font-size: 3.25em;
+  }
+
+  input.select-dropdown {
+    font-size: 1.5em !important;
+  }
+
+  .dropdown-content li>a, .dropdown-content li>span {
+    font-size: 1.5em;
+  }
+
+  #radius {
+    font-size: 1.5em;
+  }
+}
