@@ -217,7 +217,7 @@ $('#flag-submit').click(function() {
   $('.flag-reason').prop('checked', false)
 });
 
-$('#badge').click (function () {
+$('#badge, #modal2-footer').click (function () {
   if (gameLocRay.length === 1) {
     $('#countdown-text').text(`You have 1 location to go.`);
   } else if (gameLocRay.length === 0) {
@@ -225,7 +225,6 @@ $('#badge').click (function () {
   } else {
     $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
   }
-  console.log(badgeRay)
   // let badgeObj = {
   //   user_id: userID,
   //   name:
