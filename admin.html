@@ -2,41 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>uXplorn admin</title>
+    <title>uXplor admin</title>
     <link rel="stylesheet" href="https://w3cj.github.io/materialize-themes/dist/css/materialize-cyan-lime.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" href="images/theicon.ico"/>
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="icon" href="pics/theicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/admin.css">
   </head>
   <body>
     <header>
-      <nav id="nav">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center"><img src="pics/logothingy.png" alt="" /></a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <!-- NEW NAVBAR - IMPLEMENT ON ALL PAGES -->
+      <nav>
+        <div class="nav-wrapper cyan">
+          <a href="params.html" class="brand-logo center"><img class="logo-image" src="pics/logoparams.png" alt=""/></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down valign-wrapper">
             <li><a href="index.html">Home</a></li>
             <li><a href="params.html">Play</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li><a href="user_badges.html">Badges</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <div class="userView">
+                <div class="background">
+                  <img src="pics/dummyskyline.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="pics/dummyprofilepic.jpeg"></a>
+                <a href="#!name"><span class="white-text name">User Email</span></a>
+                <a id="user-email" href="#!email"><span class="white-text email">user@gmail.com</span></a>
+              </div>
+            </li>
+            <li><a class="waves-effect" href="params.html">Play</a></li>
+            <li><a class="waves-effect" href="index.html">Home</a></li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li><a class="subheader">Your Profile</a></li>
+            <li><a class="waves-effect" href="user_badges.html">Badges</a></li>
           </ul>
         </div>
-
-      <ul id="slide-out" class="side-nav">
-         <li><div class="userView">
-           <div class="background">
-             <img src="pics/dummyskyline.jpg">
-           </div>
-           <a href="#!user"><img class="circle" src="pics/dummyprofilepic.jpeg"></a>
-           <a href="#!name"><span class="white-text name">User</span></a>
-           <a href="#!email"><span class="white-text email">user@gmail.com</span></a>
-         </div></li>
-         <li><a class="waves-effect" href="#!">Play</a></li>
-         <li><a class="waves-effect" href="params.html">Set rules</a></li>
-         <li><div class="divider"></div></li>
-         <li><a class="subheader">Your profile</a></li>
-         <li><a class="waves-effect" href="#!">Badges</a></li>
-       </ul>
-       <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
       </nav>
     </header>
     <main>
@@ -44,20 +49,27 @@
         <button id="flagged" class="waves-effect waves-light btn">Flagged</button>
         <button id="rating" class="waves-effect waves-light btn">Ratings</button>
       </section>
-      <ul class="collection" id="flags">
-      </ul>
-      <ul class="collection" id="ratings">
-      </ul>
+      <div class="row">
+        <div class="col s6">
+          <ul class="collection" id="flags">
+          </ul>
+        </div>
+        <div class="col s6">
+          <ul class="collection" id="ratings">
+          </ul>
+        </div>
+      </div>
+
+
+
     </main>
     <footer class="page-footer">
-
-         <div class="footer-copyright">
-           <div class="container">
-           © 2017 uXplor
-           <a id ="button" class="grey-text text-lighten-4 right" href="#!">More Links</a>
-           </div>
-         </div>
-       </footer>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 uXplor
+        </div>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="./scripts/admin.js" charset="utf-8"></script>

@@ -6,6 +6,15 @@ body {
 
 main {
   flex: 1 0 auto;
+  margin-top: 2em;
+}
+
+.logo-image {
+  height: 2em;
+}
+
+footer.page-footer {
+  padding: 0;
 }
 
 #brand {
@@ -28,9 +37,9 @@ main {
   margin-top: 20em;
 }
 
-.material-icons {
+/*.material-icons {
   font-size: 60px;
-}
+}*/
 
 #params-input {
   display: flex;
@@ -53,11 +62,11 @@ main {
 
 .row {}
 
-nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+/*nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
   display: block;
   font-size: 7em;
-  /*padding-top: 1em;*/
-}
+  padding-top: 1em;
+}*/
 
 .dropdown-content li>a, .dropdown-content li>span {
   color: #00bcd4;
@@ -96,8 +105,63 @@ input.select-dropdown {
   height: 2em;
 }
 
+.flag-image {
+  margin-top: 3em;
+  margin-left: 1em;
+}
+
 .bar {
   margin-top: 2em;
   height: 2.34em;
   border: 1px solid black
+}
+
+#arrow-container {
+  background-color: transparent;
+  margin: auto;
+  width: 15em;
+}
+
+#arrow-direction {
+  margin: 0;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: rotate(0deg);
+  transition: transform 2s;
+  overflow: hidden;
+  background-color: white;
+}
+
+#modal1, #modal2 {
+  background-color: #00bcd4;
+}
+
+#modal1-footer, #modal2-footer {
+  background-color: #cddc39;
+}
+
+#flag-form label {
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+}
+
+.flag-instructions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.extrapadding {
+  padding: 2em;
+  padding-bottom: 0;
+  align-self: flex-end;
+  font-size: 14pt;
+}
+
+.flexer {
+  display: flex;
+  justify-content: space-between;
 }

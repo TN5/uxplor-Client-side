@@ -19,11 +19,11 @@ $(document).ready(function(){
 
 var badgeRay = [];
 var locationObj = {};
-console.log(locationObj);
 var longitude;
 var latitude;
 var placesRay = [];
 let gameLocRay = [];
+let userID = 1;
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -32,6 +32,7 @@ var options = {
 
 $.get('badges.txt', function(data) {
   badgeRay = data.split('\n');
+  badgeRay.pop();
 });
 
 function success(pos) {
@@ -118,7 +119,7 @@ function changeRadius(coef) {
     change = 200;
   }
   radius += (change * coef);
-  $('#radius').val(`${radius}ft`);
+  $('#radius').val(`${radius} ft`);
 }
 
 $('#incrementer2').click(function() {
@@ -143,11 +144,9 @@ function createScavengeLocationArray() {
   for(var i = 0; i < newLen; i++) {
     let tempObj = {};
     var index = Math.floor(Math.random() * placesRay.length);
-    console.log(placesRay.length, index);
     ray.push(makePlaceObj(placesRay[index]));
     placesRay.splice(index, 1);
   }
-  console.log(ray);
   return ray;
 }
 
@@ -163,7 +162,6 @@ function makePlaceObj(item) {
 
 $('#play-btn').click(function() {
   gameLocRay = createScavengeLocationArray();
-  console.log(gameLocRay);
   $('.game-setup').fadeOut(250);
   $('.game-play').delay(250).fadeIn(250);
   displayLocationInfo(gameLocRay);
@@ -172,7 +170,6 @@ $('#play-btn').click(function() {
 function displayLocationInfo(ray) {
   if(ray.length > 0) {
     locationObj = ray.pop();
-    console.log(locationObj);
     $('#location-name').text(locationObj.name);
     $('#location-address').text(locationObj.address);
     distanceToLocation(locationObj.lat, locationObj.long);
@@ -185,15 +182,56 @@ function distanceToLocation(lat, long) {
   let deltaLat = lat - latitude;
   let deltaLong = long - longitude;
   let distLat = deltaLat * 365221.43;
-  let distLong = deltaLong * (365221.43 * Math.sin((90 - long) * .0174533));
+  let distLong = deltaLong * (365221.43 * Math.sin((90 - lat) * .0174533));
   let distance = Math.sqrt((distLat * distLat) + (distLong * distLong));
   hotness(distance);
-  console.log(distLat, distLong, distance);
+  directionPointer(distLat, distLong);
   $('#distance-to').text(`${Math.ceil(distance)} ft to ${locationObj.name}`);
 }
 
-$('#flag-submit, #badge').click(function() {
+$('#flag-submit').click(function() {
+  if($('.flag-reason[name=flag-reason]:checked').val() != undefined){
+    displayLocationInfo(gameLocRay);
+    console.log(locationObj);
+    let flagObj = {
+      flag_type : $('.flag-reason[name=flag-reason]:checked').val(),
+      google_id: locationObj.id,
+      user_id: 1,
+      name: locationObj.name,
+      flagged: true
+    }
+    console.log($('.flag-reason[name=flag-reason]:checked').val());
+    $.post('https://uxplor.herokuapp.com/flag', flagObj, function(data) {
+      console.log(data);
+    });
+  } else {
+    alert("You must select a value or press cancel.")
+  }
+  if (gameLocRay.length === 1) {
+    $('#countdown-text').text(`You have 1 location to go.`);
+  } else if (gameLocRay.length === 0) {
+    $('#countdown-text').text(`This is your last location.`);
+  } else {
+    $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
+  }
+  $('.flag-reason').prop('checked', false)
+});
+
+$('#badge, #modal2-footer').click (function () {
+  if (gameLocRay.length === 1) {
+    $('#countdown-text').text(`You have 1 location to go.`);
+  } else if (gameLocRay.length === 0) {
+    $('#countdown-text').text(`This is your last location.`);
+  } else {
+    $('#countdown-text').text(`You have ${gameLocRay.length} locations to go.`);
+  }
+  // let badgeObj = {
+  //   user_id: userID,
+  //   name:
+  // }
+  // $.post(`https://uxplor.herokuapp.com/badge`, badgeObj)
   displayLocationInfo(gameLocRay);
+
 });
 
 function hotness(hot) {
@@ -208,7 +246,7 @@ function hotness(hot) {
     $('.yellow-bar').css('background-color', '#FFF359');
   }
 
-  $('#hotness-text').text(`You're Cold!`);
+  $('#hotness-text').text(`You're Cold!`).css('color', 'white');
   if (hot <= 150) {
     $('#hotness-text').text(`You're on Fire!`).css('color', '#c30000');
   } else if (hot <= 300) {
@@ -223,5 +261,16 @@ function hotness(hot) {
     $('.badge-container').append(`<img src="${badgeRay[index]}"/>`);
     $('#modal2-trigger').click();
   }
+}
 
+function directionPointer(y, x) {
+  let angle = Math.round((Math.atan(y/x) * 57.2958));
+  if(x < 0) {
+    angle += 180;
+  }
+  rotateArrow(-angle);
+}
+
+function rotateArrow(angle) {
+  $('#arrow-direction').css('transform', `rotate(${angle}deg`);
 }

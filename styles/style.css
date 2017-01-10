@@ -17,6 +17,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.logo-image {
+  height: 2em;
+}
+
+footer.page-footer {
+  padding: 0;
+}
+
 #nav-mobile{
   margin-right: 2em;
 }
@@ -36,32 +44,30 @@ body {
   justify-content: center;
 }
 
-.row {
-
-}
-
 #signin {
-  margin-top: 1.5em;
-  margin-left: 10vw;
-  margin-right: 5vw;
-  width: 35vw;
   opacity: .7;
   color: #00bcd4;
 }
 
 #signup {
-  margin-top: 1.5em;
-  width: 35vw;
   opacity: .7;
   color: #00bcd4;
-  margin-left: 4vw;
-  /*margin-right: 15vw;*/
-}
-#form-inputs{
-  display: flex;
-  justify-content: space-around;
 }
 
 footer.page-footer {
   margin: 0px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .9;
+  margin: 2em;
+  margin-bottom: 0;
+}
+
+.centerthis {
+  display: flex;
+  font-size: 24pt;
 }
